@@ -22,7 +22,7 @@ UPTIME = time.time()
 
 # Admins, Channels & Users
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', "5023815012 5039863679 1877279215 6315836859 6230751739 6067718572").split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', "5023815012 6315836859 5039863679 1877279215 6315836859 6230751739 6067718572").split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -63,7 +63,9 @@ P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
 PM_IMDB = is_enabled(environ.get('PM_IMDB', "True"), True)
 IMDB = is_enabled(environ.get('IMDB', "True"), True)
 SINGLE_BUTTON = is_enabled(environ.get('SINGLE_BUTTON', "True"), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "{file_name}")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b> @MOTIONFILMS {file_name}</b> \n\n🎪 <b>𝐆𝐑𝐎𝐔𝐏 𝟏 </b> :- <b>t.me/+7Oy-KRDDqZ1jN2I1 </b>\n🎪 <b>𝐆𝐑𝐎𝐔𝐏 𝟐 </b> :- <b>t.me/+pfnkZeFaz6MxYmI1</b>\n🎪 <b> MOVIE DISCUSSIONS </b> :- <b>t.me/+iRUoJTZss9JiMmI0</b>\n🎪 <b>LATEST DVD UPDATES</b> :- <b>t.me/+IqgPFRSBmZU5YTZl</b>\n🎪 <b>LATEST PRE-DVD UPDATES</b> :- <b>t.me/+koNJ5Z9mgb5kMjZl</b>\n\n
+
+⚠️ <b>FILE WILL BE DELETE IN 5 MINUTES PLEASE FORWARD FILE TO SAVED MESSAGE OR ANYWHERE</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", None)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
